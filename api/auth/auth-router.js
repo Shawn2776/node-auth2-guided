@@ -38,4 +38,8 @@ router.post('/login', (req, res, next) => {
     .catch(next)
 })
 
+function makeToken(user){
+
+}
+
 module.exports = router
