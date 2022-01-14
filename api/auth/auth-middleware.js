@@ -1,6 +1,7 @@
 // AUTHENTICATION
 const restricted = (req, res, next) => {
-  next()
+  const token = req.headers.authorization
+  
 }
 
 // AUTHORIZATION
