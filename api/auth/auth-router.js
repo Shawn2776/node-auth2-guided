@@ -37,7 +37,6 @@ router.post('/login', (req, res, next) => {
     })
     .catch(next)
 })
-
 function makeToken(user){
   const payload = {
     subject: user.id,
