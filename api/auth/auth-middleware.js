@@ -10,6 +10,7 @@ const restricted = (req, res, next) => {
         res.status(401).json("Token is bad: " + err.message)
       }else{
         req.decodedToken = decoded
+        next()
       }
     })
   }
