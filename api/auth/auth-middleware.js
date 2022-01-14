@@ -6,7 +6,7 @@ const restricted = (req, res, next) => {
   if(!token){
     res.status(401).json("Token please!")
   }else{
-    jwt.verify(token,"keepitsecret",(err,decoded)=>{
+    jwt.verify(token,JWT_SECRET,(err,decoded)=>{
       if(err){
         res.status(401).json("Token is bad: " + err.message)
       }else{
