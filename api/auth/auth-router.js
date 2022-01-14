@@ -44,6 +44,9 @@ function makeToken(user){
     username: user.username,
     role: user.role
   }
+  const options = {
+    expiresIn: "20s"
+  }
 }
 
 module.exports = router
